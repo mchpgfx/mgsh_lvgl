@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>lvgl_demo_sam9x60_curiosity_wvga</name>
+            <creation-uuid>5e8fed86-e4b4-427b-88e9-5865d3f21a48</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>../../../lvgl-release-v8.1/src</sourceRootElem>
+                <sourceRootElem>../../../lvgl-release-v8.2/demos</sourceRootElem>
+                <sourceRootElem>../../../lvgl-release-v8.2/src</sourceRootElem>
+                <sourceRootElem>../src</sourceRootElem>
+                <sourceRootElem>../../../lvgl/demos</sourceRootElem>
+                <sourceRootElem>../../../lvgl/src</sourceRootElem>
+                <sourceRootElem>../../../third_party/lvgl/demos</sourceRootElem>
+                <sourceRootElem>../../../third_party/lvgl/src</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>lcdc_rgb565_mxt_9x60_cu_wvga</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>
