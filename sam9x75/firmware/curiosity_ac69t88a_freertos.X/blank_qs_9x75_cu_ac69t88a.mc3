@@ -4147,7 +4147,7 @@
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;core&quot; x=&quot;183&quot; y=&quot;8&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;dfp&quot; x=&quot;0&quot; y=&quot;8&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;drv_i2c&quot; x=&quot;130&quot; y=&quot;155&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;flexcom6&quot; x=&quot;0&quot; y=&quot;244&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;flexcom6&quot; x=&quot;0&quot; y=&quot;243&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;gfx_bridge_lvdsc_plib&quot; x=&quot;268&quot; y=&quot;345&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;gfx_display_comp_ac69t88a&quot; x=&quot;109&quot; y=&quot;344&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;gfx_maxtouch_controller&quot; x=&quot;270&quot; y=&quot;199&quot;/&gt;
@@ -4155,7 +4155,7 @@
         &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;le_gfx_gfx2d&quot; x=&quot;409&quot; y=&quot;451&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;le_gfx_template_ac69t88a&quot; x=&quot;153&quot; y=&quot;107&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;pit&quot; x=&quot;720&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;plib_gfx2d&quot; x=&quot;279&quot; y=&quot;475&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;plib_gfx2d&quot; x=&quot;279&quot; y=&quot;474&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;rtt&quot; x=&quot;420&quot; y=&quot;83&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;sys_input&quot; x=&quot;152&quot; y=&quot;37&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;sys_time&quot; x=&quot;553&quot; y=&quot;37&quot;/&gt;
@@ -6655,87 +6655,6 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_bridge_lvdsc_plib" name="LVDSClockDivPMC"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_bridge_lvdsc_plib&gt;
-  &lt;gfx_bridge_lvdsc_plib dnOrder=&quot;0&quot; id=&quot;LVDSClockDivPMC&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/gfx_bridge_lvdsc_plib&gt;
-&lt;/gfx_bridge_lvdsc_plib&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_bridge_lvdsc_plib" name="LVDSClockFrac"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_bridge_lvdsc_plib&gt;
-  &lt;gfx_bridge_lvdsc_plib dnOrder=&quot;0&quot; id=&quot;LVDSClockFrac&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/gfx_bridge_lvdsc_plib&gt;
-&lt;/gfx_bridge_lvdsc_plib&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_bridge_lvdsc_plib" name="LVDSClockMul"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_bridge_lvdsc_plib&gt;
-  &lt;gfx_bridge_lvdsc_plib dnOrder=&quot;0&quot; id=&quot;LVDSClockMul&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/gfx_bridge_lvdsc_plib&gt;
-&lt;/gfx_bridge_lvdsc_plib&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_bridge_lvdsc_plib" name="LVDSClockOutHint"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_bridge_lvdsc_plib&gt;
-  &lt;gfx_bridge_lvdsc_plib dnOrder=&quot;0&quot; id=&quot;LVDSClockOutHint&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/gfx_bridge_lvdsc_plib&gt;
-&lt;/gfx_bridge_lvdsc_plib&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_bridge_lvdsc_plib" name="LVDSClockSrcHint"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_bridge_lvdsc_plib&gt;
-  &lt;gfx_bridge_lvdsc_plib dnOrder=&quot;0&quot; id=&quot;LVDSClockSrcHint&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/gfx_bridge_lvdsc_plib&gt;
-&lt;/gfx_bridge_lvdsc_plib&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_bridge_lvdsc_plib" name="LVDSClocksEn"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_bridge_lvdsc_plib&gt;
-  &lt;gfx_bridge_lvdsc_plib dnOrder=&quot;0&quot; id=&quot;LVDSClocksEn&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/gfx_bridge_lvdsc_plib&gt;
-&lt;/gfx_bridge_lvdsc_plib&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_bridge_lvdsc_plib" name="LVDSPLLISRMask"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_bridge_lvdsc_plib&gt;
-  &lt;gfx_bridge_lvdsc_plib dnOrder=&quot;0&quot; id=&quot;LVDSPLLISRMask&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/gfx_bridge_lvdsc_plib&gt;
-&lt;/gfx_bridge_lvdsc_plib&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_bridge_lvdsc_plib" name="LVDSPLLIndex"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_bridge_lvdsc_plib&gt;
-  &lt;gfx_bridge_lvdsc_plib dnOrder=&quot;0&quot; id=&quot;LVDSPLLIndex&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/gfx_bridge_lvdsc_plib&gt;
-&lt;/gfx_bridge_lvdsc_plib&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_bridge_lvdsc_plib" name="XLCDCPixClockHint"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_bridge_lvdsc_plib&gt;
-  &lt;gfx_bridge_lvdsc_plib dnOrder=&quot;0&quot; id=&quot;XLCDCPixClockHint&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/gfx_bridge_lvdsc_plib&gt;
-&lt;/gfx_bridge_lvdsc_plib&gt;
-</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_display_comp_ac69t88a" name="!@#harmonyAttachmentState"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_display_comp_ac69t88a&gt;
   &lt;gfx_display_comp_ac69t88a dnOrder=&quot;0&quot;&gt;
@@ -7272,15 +7191,6 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_xlcdc" name="XDMColorFB"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;le_gfx_driver_xlcdc&gt;
   &lt;le_gfx_driver_xlcdc dnOrder=&quot;0&quot; id=&quot;XDMColorFB&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/le_gfx_driver_xlcdc&gt;
-&lt;/le_gfx_driver_xlcdc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_xlcdc" name="XLCDCGCLKEnable"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;le_gfx_driver_xlcdc&gt;
-  &lt;le_gfx_driver_xlcdc dnOrder=&quot;0&quot; id=&quot;XLCDCGCLKEnable&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/le_gfx_driver_xlcdc&gt;
 &lt;/le_gfx_driver_xlcdc&gt;
