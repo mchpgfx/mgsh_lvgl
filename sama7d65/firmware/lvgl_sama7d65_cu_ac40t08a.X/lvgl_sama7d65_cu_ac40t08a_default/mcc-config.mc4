@@ -90,7 +90,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\osal\osal_impl_basic.h
   hash: 65e68edbc0320d0407399f65e6d06ff7e6d3d7697231cf1fe0a1fdf1d65f0463
 - file: ..\src\config\default\peripheral\clk\plib_clk.c
-  hash: 9a44d33555fd0e7776144d3eaba6609e8b02524fa6c43850966b7139cc0d710b
+  hash: 38b426e23e7228d05201be895bea266dcebe4cd5ced19e96528af819801ad788
 - file: ..\src\config\default\peripheral\clk\plib_clk.h
   hash: 2f8d3763aa3dce8077ae8e3540a0cfc1c40f02f2a3b742270556b1349c26e7f9
 - file: ..\src\config\default\peripheral\dwdt\plib_dwdt.c
