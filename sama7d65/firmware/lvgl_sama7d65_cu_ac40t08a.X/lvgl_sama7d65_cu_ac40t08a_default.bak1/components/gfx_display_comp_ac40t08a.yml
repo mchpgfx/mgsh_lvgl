@@ -1,0 +1,71 @@
+configVersion: 1.0.0
+componentName: gfx_display_comp_ac40t08a
+coreVersion: 5.8.2
+device: SAMA7D65
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: gfx_display_comp_ac40t08a
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: gfx
+  type: package
+  version: v3.16.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: gfx_dsi_display_cap
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: gfx_bridge_dsi_plib
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: gfx_dsi_display_dep
+            type: String
+          type: Attributes
+        type: DirectCapability
+      - attributes:
+          id: touch_panel
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: gfx_maxtouch_controller
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: touch_panel
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: gfx_display_comp_ac40t08a
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: gfx_display_comp_ac40t08a
+          x: '26'
+          y: '202'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols: {}
+  userData: {}

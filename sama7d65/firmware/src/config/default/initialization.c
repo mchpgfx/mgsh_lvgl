@@ -289,8 +289,6 @@ void SYS_Initialize ( void* data )
     SYS_INP_Init();
 
 
-    DRV_GPU2DC_Initialize();
-
     DISP_Initialize();
 
 

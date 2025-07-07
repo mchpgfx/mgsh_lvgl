@@ -36,6 +36,7 @@
 #include "lv_demos.h"
 
 /* LVGL Parameters */
+#define LV_UNCACHED_BUFFER  0
 #define LV_TICK_INC_VAL_MS  1
 #define LV_TASK_INC_VAL_MS  LV_DEF_REFR_PERIOD
 
@@ -62,7 +63,11 @@
 APP_LVGL_DATA app_lvglData;
 
 /* Scratch Buffer */
+#if LV_UNCACHED_BUFFER
 __attribute__ ((section(".region_nocache"), aligned (32))) uint16_t buff[720 * 1280];
+#else
+__attribute__ ((aligned (32))) uint16_t buff[720 * 1280];
+#endif
 
 // *****************************************************************************
 // *****************************************************************************
@@ -212,9 +217,10 @@ void APP_LVGL_Tasks ( void )
                     SYS_TIME_PERIODIC);
             
             /* Demo */
-            #if LV_USE_DEMO_WIDGETS
+            #if LV_USE_DEMO_WIDGETS && !LV_USE_DEMO_BENCHMARK
             lv_demo_widgets();
-            #elif LV_USE_DEMO_BENCHMARK
+            #elif LV_USE_DEMO_WIDGETS && LV_USE_DEMO_BENCHMARK
+            lv_demo_widgets();
             lv_demo_benchmark();
             #elif LV_USE_DEMO_STRESS
             lv_demo_stress();

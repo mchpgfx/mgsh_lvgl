@@ -1,0 +1,220 @@
+configVersion: 1.0.0
+componentName: flexcom0
+coreVersion: 5.8.2
+device: SAMA7D65
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: flexcom0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.22.5
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: FLEXCOM0_I2C
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: drv_i2c_0
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: drv_i2c_I2C_dependency
+            type: String
+          type: Attributes
+        type: DirectCapability
+      - attributes:
+          id: FLEXCOM0_SPI
+        children:
+        - children:
+          - attributes:
+              id: enabled
+            children:
+            - type: Value
+              value: 'false'
+            type: Boolean
+          type: Attributes
+        type: DirectCapability
+      - attributes:
+          id: FLEXCOM0_UART
+        children:
+        - children:
+          - attributes:
+              id: enabled
+            children:
+            - type: Value
+              value: 'false'
+            type: Boolean
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: flexcom0
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: flexcom0
+          x: '24'
+          y: '322'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    FLEXCOM_MODE:
+      attributes:
+        id: FLEXCOM_MODE
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '3'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    FLEXCOM_SPI_CSR3_SCBR_VALUE:
+      attributes:
+        id: FLEXCOM_SPI_CSR3_SCBR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '100'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM_TWI_CLK_SRC_FREQ:
+      attributes:
+        id: FLEXCOM_TWI_CLK_SRC_FREQ
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '100000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM_SPI_CSR2_SCBR_VALUE:
+      attributes:
+        id: FLEXCOM_SPI_CSR2_SCBR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '100'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM_TWI_CWGR_CLDIV:
+      attributes:
+        id: FLEXCOM_TWI_CWGR_CLDIV
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '122'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM_TWI_CWGR_CHDIV:
+      attributes:
+        id: FLEXCOM_TWI_CWGR_CHDIV
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '122'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM_TWI_CWGR_CKDIV:
+      attributes:
+        id: FLEXCOM_TWI_CWGR_CKDIV
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM_SPI_CSR1_SCBR_VALUE:
+      attributes:
+        id: FLEXCOM_SPI_CSR1_SCBR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '100'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM_SPI_CSR0_SCBR_VALUE:
+      attributes:
+        id: FLEXCOM_SPI_CSR0_SCBR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '100'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM_SPI_PERIPHERAL_CLOCK:
+      attributes:
+        id: FLEXCOM_SPI_PERIPHERAL_CLOCK
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '100000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEX_USART_CLOCK_FREQ:
+      attributes:
+        id: FLEX_USART_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '100000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEX_USART_IRDA_FILTER_VAL:
+      attributes:
+        id: FLEX_USART_IRDA_FILTER_VAL
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '137'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM_TWI_TIMEOUT_COUNT_VAL:
+      attributes:
+        id: FLEXCOM_TWI_TIMEOUT_COUNT_VAL
+      children:
+      - children:
+        - attributes:
+            id: flexcom0
+            value: '200000'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}

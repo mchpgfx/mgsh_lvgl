@@ -23,16 +23,6 @@
               <itemPath>../src/config/default/gfx/display/touch_display.h</itemPath>
             </logicalFolder>
             <logicalFolder name="driver" displayName="driver" projectFiles="true">
-              <logicalFolder name="gpu2dc" displayName="gpu2dc" projectFiles="true">
-                <itemPath>../src/config/default/gfx/driver/gpu2dc/nano2D_hal.h</itemPath>
-                <itemPath>../src/config/default/gfx/driver/gpu2dc/drv_gfx_gpu2dc.h</itemPath>
-                <itemPath>../src/config/default/gfx/driver/gpu2dc/nano2D_enum.h</itemPath>
-                <itemPath>../src/config/default/gfx/driver/gpu2dc/version.h</itemPath>
-                <itemPath>../src/config/default/gfx/driver/gpu2dc/nano2D_base.h</itemPath>
-                <itemPath>../src/config/default/gfx/driver/gpu2dc/nano2D.h</itemPath>
-                <itemPath>../src/config/default/gfx/driver/gpu2dc/nano2D_types.h</itemPath>
-                <itemPath>../src/config/default/gfx/driver/gpu2dc/nano2D_option.h</itemPath>
-              </logicalFolder>
               <logicalFolder name="xlcdc" displayName="xlcdc" projectFiles="true">
                 <logicalFolder name="bridge" displayName="bridge" projectFiles="true">
                   <itemPath>../src/config/default/gfx/driver/controller/xlcdc/bridge/dsi/plib_dsi.h</itemPath>
@@ -120,19 +110,6 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
-        <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
-          <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
-            <logicalFolder name="Core_A" displayName="Core_A" projectFiles="true">
-              <logicalFolder name="Include" displayName="Include" projectFiles="true">
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_cp15.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_iccarm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/core_ca.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_gcc.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_compiler.h</itemPath>
-              </logicalFolder>
-            </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
         <logicalFolder name="SAMA7D65_DFP"
                        displayName="SAMA7D65_DFP"
                        projectFiles="true">
@@ -311,8 +288,34 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="lvgl_sama7d65_cu_ac40t08a_default"
+                     displayName="lvgl_sama7d65_cu_ac40t08a_default"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/drv_i2c.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/rtt.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/gfx_maxtouch_controller.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/flexcom0.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/gfx_display_comp_ac40t08a.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/sys_input.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/HarmonyCore.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/cmsis.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/flexcom6.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/dfp.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/gfx_bridge_dsi_plib.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/drv_i2c_0.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/le_gfx_driver_xlcdc.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/core.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/sys_time.yml</itemPath>
+          <itemPath>lvgl_sama7d65_cu_ac40t08a_default/components/stdio.yml</itemPath>
+        </logicalFolder>
+        <itemPath>lvgl_sama7d65_cu_ac40t08a_default/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>lvgl_sama7d65_cu_ac40t08a.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -323,85 +326,29 @@
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="f1" displayName="lvgl" projectFiles="true">
+    <logicalFolder name="lvgl" displayName="lvgl" projectFiles="true">
       <logicalFolder name="demos" displayName="demos" projectFiles="true">
         <logicalFolder name="benchmark" displayName="benchmark" projectFiles="true">
           <logicalFolder name="assets" displayName="assets" projectFiles="true">
             <itemPath>../src/lvgl/demos/benchmark/assets/img_benchmark_avatar.c</itemPath>
-            <itemPath>../src/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_alpha256.c</itemPath>
-            <itemPath>../src/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_argb.c</itemPath>
-            <itemPath>../src/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_indexed16.c</itemPath>
-            <itemPath>../src/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_rgb.c</itemPath>
-            <itemPath>../src/lvgl/demos/benchmark/assets/lv_font_benchmark_montserrat_12_compr_az.c.c</itemPath>
-            <itemPath>../src/lvgl/demos/benchmark/assets/lv_font_benchmark_montserrat_16_compr_az.c.c</itemPath>
-            <itemPath>../src/lvgl/demos/benchmark/assets/lv_font_benchmark_montserrat_28_compr_az.c.c</itemPath>
+            <itemPath>../src/lvgl/demos/benchmark/assets/img_benchmark_lvgl_logo_argb.c</itemPath>
+            <itemPath>../src/lvgl/demos/benchmark/assets/img_benchmark_lvgl_logo_rgb.c</itemPath>
+            <itemPath>../src/lvgl/demos/benchmark/assets/lv_font_benchmark_montserrat_12_aligned.c</itemPath>
+            <itemPath>../src/lvgl/demos/benchmark/assets/lv_font_benchmark_montserrat_14_aligned.c</itemPath>
+            <itemPath>../src/lvgl/demos/benchmark/assets/lv_font_benchmark_montserrat_16_aligned.c</itemPath>
+            <itemPath>../src/lvgl/demos/benchmark/assets/lv_font_benchmark_montserrat_18_aligned.c</itemPath>
+            <itemPath>../src/lvgl/demos/benchmark/assets/lv_font_benchmark_montserrat_20_aligned.c</itemPath>
+            <itemPath>../src/lvgl/demos/benchmark/assets/lv_font_benchmark_montserrat_24_aligned.c</itemPath>
+            <itemPath>../src/lvgl/demos/benchmark/assets/lv_font_benchmark_montserrat_26_aligned.c</itemPath>
           </logicalFolder>
           <itemPath>../src/lvgl/demos/benchmark/lv_demo_benchmark.c</itemPath>
           <itemPath>../src/lvgl/demos/benchmark/lv_demo_benchmark.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="flex_layout" displayName="flex_layout" projectFiles="true">
-          <itemPath>../src/lvgl/demos/flex_layout/lv_demo_flex_layout_ctrl_pad.c</itemPath>
-          <itemPath>../src/lvgl/demos/flex_layout/lv_demo_flex_layout_flex_loader.c</itemPath>
-          <itemPath>../src/lvgl/demos/flex_layout/lv_demo_flex_layout_main.c</itemPath>
-          <itemPath>../src/lvgl/demos/flex_layout/lv_demo_flex_layout_view.c</itemPath>
-          <itemPath>../src/lvgl/demos/flex_layout/lv_demo_flex_layout_view_child_node.c</itemPath>
-          <itemPath>../src/lvgl/demos/flex_layout/lv_demo_flex_layout_view_ctrl_pad.c</itemPath>
-          <itemPath>../src/lvgl/demos/flex_layout/lv_demo_flex_layout.h</itemPath>
-          <itemPath>../src/lvgl/demos/flex_layout/lv_demo_flex_layout_main.h</itemPath>
         </logicalFolder>
         <logicalFolder name="keypad_encoder"
                        displayName="keypad_encoder"
                        projectFiles="true">
           <itemPath>../src/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.c</itemPath>
           <itemPath>../src/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="multilang" displayName="multilang" projectFiles="true">
-          <logicalFolder name="assets" displayName="assets" projectFiles="true">
-            <logicalFolder name="avatars" displayName="avatars" projectFiles="true">
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_1.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_10.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_11.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_12.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_13.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_14.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_15.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_16.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_17.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_18.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_19.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_2.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_22.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_25.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_3.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_4.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_5.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_6.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_7.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_8.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/avatars/img_multilang_avatar_9.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="emojis" displayName="emojis" projectFiles="true">
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_artist_palette.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_books.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_camera_with_flash.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_cat_face.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_deciduous_tree.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_dog_face.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_earth_globe_europe_africa.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_flexed_biceps.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_movie_camera.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_red_heart.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_rocket.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/emojis/img_emoji_soccer_ball.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="fonts" displayName="fonts" projectFiles="true">
-              <itemPath>../src/lvgl/demos/multilang/assets/fonts/font_multilang_large.c</itemPath>
-              <itemPath>../src/lvgl/demos/multilang/assets/fonts/font_multilang_small.c</itemPath>
-            </logicalFolder>
-            <itemPath>../src/lvgl/demos/multilang/assets/img_multilang_like.c</itemPath>
-          </logicalFolder>
-          <itemPath>../src/lvgl/demos/multilang/lv_demo_multilang.c</itemPath>
-          <itemPath>../src/lvgl/demos/multilang/lv_demo_multilang.h</itemPath>
         </logicalFolder>
         <logicalFolder name="music" displayName="music" projectFiles="true">
           <logicalFolder name="assets" displayName="assets" projectFiles="true">
@@ -470,29 +417,21 @@
           <logicalFolder name="assets" displayName="assets" projectFiles="true">
             <itemPath>../src/lvgl/demos/render/assets/img_render_arc_bg.c</itemPath>
             <itemPath>../src/lvgl/demos/render/assets/img_render_lvgl_logo_argb8888.c</itemPath>
+            <itemPath>../src/lvgl/demos/render/assets/img_render_lvgl_logo_argb8888_premultiplied.c</itemPath>
             <itemPath>../src/lvgl/demos/render/assets/img_render_lvgl_logo_i1.c</itemPath>
             <itemPath>../src/lvgl/demos/render/assets/img_render_lvgl_logo_l8.c</itemPath>
             <itemPath>../src/lvgl/demos/render/assets/img_render_lvgl_logo_rgb565.c</itemPath>
+            <itemPath>../src/lvgl/demos/render/assets/img_render_lvgl_logo_rgb565a8.c</itemPath>
+            <itemPath>../src/lvgl/demos/render/assets/img_render_lvgl_logo_rgb565_swapped.c</itemPath>
             <itemPath>../src/lvgl/demos/render/assets/img_render_lvgl_logo_rgb888.c</itemPath>
             <itemPath>../src/lvgl/demos/render/assets/img_render_lvgl_logo_xrgb8888.c</itemPath>
           </logicalFolder>
           <itemPath>../src/lvgl/demos/render/lv_demo_render.c</itemPath>
           <itemPath>../src/lvgl/demos/render/lv_demo_render.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="scroll" displayName="scroll" projectFiles="true">
-          <itemPath>../src/lvgl/demos/scroll/lv_demo_scroll.c</itemPath>
-          <itemPath>../src/lvgl/demos/scroll/lv_demo_scroll.h</itemPath>
-        </logicalFolder>
         <logicalFolder name="stress" displayName="stress" projectFiles="true">
           <itemPath>../src/lvgl/demos/stress/lv_demo_stress.c</itemPath>
           <itemPath>../src/lvgl/demos/stress/lv_demo_stress.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="transform" displayName="transform" projectFiles="true">
-          <logicalFolder name="assets" displayName="assets" projectFiles="true">
-            <itemPath>../src/lvgl/demos/transform/assets/img_transform_avatar_15.c</itemPath>
-          </logicalFolder>
-          <itemPath>../src/lvgl/demos/transform/lv_demo_transform.c</itemPath>
-          <itemPath>../src/lvgl/demos/transform/lv_demo_transform.h</itemPath>
         </logicalFolder>
         <logicalFolder name="vector_graphic"
                        displayName="vector_graphic"
@@ -561,7 +500,42 @@
           <itemPath>../src/lvgl/src/display/lv_display_private.h</itemPath>
         </logicalFolder>
         <logicalFolder name="draw" displayName="draw" projectFiles="true">
+          <logicalFolder name="dma2d" displayName="dma2d" projectFiles="true">
+            <itemPath>../src/lvgl/src/draw/dma2d/lv_draw_dma2d.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/dma2d/lv_draw_dma2d_fill.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/dma2d/lv_draw_dma2d_img.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/dma2d/lv_draw_dma2d.h</itemPath>
+            <itemPath>../src/lvgl/src/draw/dma2d/lv_draw_dma2d_private.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="nema_gfx" displayName="nema_gfx" projectFiles="true">
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_arc.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_border.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_fill.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_img.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_label.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_layer.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_line.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_stm32_hal.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_triangle.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_utils.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_nema_gfx_path.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.h</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h</itemPath>
+            <itemPath>../src/lvgl/src/draw/nema_gfx/lv_nema_gfx_path.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="nxp" displayName="nxp" projectFiles="true">
+            <logicalFolder name="g2d" displayName="g2d" projectFiles="true">
+              <itemPath>../src/lvgl/src/draw/nxp/g2d/lv_draw_buf_g2d.c</itemPath>
+              <itemPath>../src/lvgl/src/draw/nxp/g2d/lv_draw_g2d.c</itemPath>
+              <itemPath>../src/lvgl/src/draw/nxp/g2d/lv_draw_g2d_fill.c</itemPath>
+              <itemPath>../src/lvgl/src/draw/nxp/g2d/lv_draw_g2d_img.c</itemPath>
+              <itemPath>../src/lvgl/src/draw/nxp/g2d/lv_g2d_buf_map.c</itemPath>
+              <itemPath>../src/lvgl/src/draw/nxp/g2d/lv_g2d_utils.c</itemPath>
+              <itemPath>../src/lvgl/src/draw/nxp/g2d/lv_draw_g2d.h</itemPath>
+              <itemPath>../src/lvgl/src/draw/nxp/g2d/lv_g2d_buf_map.h</itemPath>
+              <itemPath>../src/lvgl/src/draw/nxp/g2d/lv_g2d_utils.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="pxp" displayName="pxp" projectFiles="true">
               <itemPath>../src/lvgl/src/draw/nxp/pxp/lv_draw_buf_pxp.c</itemPath>
               <itemPath>../src/lvgl/src/draw/nxp/pxp/lv_draw_pxp.c</itemPath>
@@ -597,6 +571,10 @@
               <itemPath>../src/lvgl/src/draw/nxp/vglite/lv_vglite_path.h</itemPath>
               <itemPath>../src/lvgl/src/draw/nxp/vglite/lv_vglite_utils.h</itemPath>
             </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="opengles" displayName="opengles" projectFiles="true">
+            <itemPath>../src/lvgl/src/draw/opengles/lv_draw_opengles.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/opengles/lv_draw_opengles.h</itemPath>
           </logicalFolder>
           <logicalFolder name="renesas" displayName="renesas" projectFiles="true">
             <logicalFolder name="dave2d" displayName="dave2d" projectFiles="true">
@@ -636,17 +614,21 @@
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend.c</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_al88.c</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888.c</itemPath>
+              <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888_premultiplied.c</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_i1.c</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_l8.c</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_rgb565.c</itemPath>
+              <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_rgb565_swapped.c</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_rgb888.c</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend.h</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_private.h</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_al88.h</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888.h</itemPath>
+              <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888_premultiplied.h</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_i1.h</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_l8.h</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_rgb565.h</itemPath>
+              <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_rgb565_swapped.h</itemPath>
               <itemPath>../src/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_rgb888.h</itemPath>
             </logicalFolder>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw.c</itemPath>
@@ -654,7 +636,7 @@
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_border.c</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_box_shadow.c</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_fill.c</itemPath>
-            <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_gradient.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_grad.c</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_img.c</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_letter.c</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_line.c</itemPath>
@@ -662,13 +644,14 @@
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_mask_rect.c</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_transform.c</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_triangle.c</itemPath>
+            <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_utils.c</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_vector.c</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw.h</itemPath>
-            <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_gradient.h</itemPath>
-            <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_gradient_private.h</itemPath>
+            <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_grad.h</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_mask.h</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_mask_private.h</itemPath>
             <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_private.h</itemPath>
+            <itemPath>../src/lvgl/src/draw/sw/lv_draw_sw_utils.h</itemPath>
           </logicalFolder>
           <logicalFolder name="vg_lite" displayName="vg_lite" projectFiles="true">
             <itemPath>../src/lvgl/src/draw/vg_lite/lv_draw_buf_vg_lite.c</itemPath>
@@ -702,6 +685,7 @@
             <itemPath>../src/lvgl/src/draw/vg_lite/lv_vg_lite_utils.h</itemPath>
           </logicalFolder>
           <itemPath>../src/lvgl/src/draw/lv_draw.c</itemPath>
+          <itemPath>../src/lvgl/src/draw/lv_draw_3d.c</itemPath>
           <itemPath>../src/lvgl/src/draw/lv_draw_arc.c</itemPath>
           <itemPath>../src/lvgl/src/draw/lv_draw_buf.c</itemPath>
           <itemPath>../src/lvgl/src/draw/lv_draw_image.c</itemPath>
@@ -713,6 +697,7 @@
           <itemPath>../src/lvgl/src/draw/lv_draw_vector.c</itemPath>
           <itemPath>../src/lvgl/src/draw/lv_image_decoder.c</itemPath>
           <itemPath>../src/lvgl/src/draw/lv_draw.h</itemPath>
+          <itemPath>../src/lvgl/src/draw/lv_draw_3d.h</itemPath>
           <itemPath>../src/lvgl/src/draw/lv_draw_arc.h</itemPath>
           <itemPath>../src/lvgl/src/draw/lv_draw_buf.h</itemPath>
           <itemPath>../src/lvgl/src/draw/lv_draw_buf_private.h</itemPath>
@@ -744,6 +729,11 @@
               <itemPath>../src/lvgl/src/drivers/display/fb/lv_linux_fbdev.c</itemPath>
               <itemPath>../src/lvgl/src/drivers/display/fb/lv_linux_fbdev.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="ft81x" displayName="ft81x" projectFiles="true">
+              <itemPath>../src/lvgl/src/drivers/display/ft81x/lv_ft81x.c</itemPath>
+              <itemPath>../src/lvgl/src/drivers/display/ft81x/lv_ft81x.h</itemPath>
+              <itemPath>../src/lvgl/src/drivers/display/ft81x/lv_ft81x_defines.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="ili9341" displayName="ili9341" projectFiles="true">
               <itemPath>../src/lvgl/src/drivers/display/ili9341/lv_ili9341.c</itemPath>
               <itemPath>../src/lvgl/src/drivers/display/ili9341/lv_ili9341.h</itemPath>
@@ -770,6 +760,10 @@
               <itemPath>../src/lvgl/src/drivers/display/st7796/lv_st7796.c</itemPath>
               <itemPath>../src/lvgl/src/drivers/display/st7796/lv_st7796.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="st_ltdc" displayName="st_ltdc" projectFiles="true">
+              <itemPath>../src/lvgl/src/drivers/display/st_ltdc/lv_st_ltdc.c</itemPath>
+              <itemPath>../src/lvgl/src/drivers/display/st_ltdc/lv_st_ltdc.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="tft_espi" displayName="tft_espi" projectFiles="true">
               <itemPath>../src/lvgl/src/drivers/display/tft_espi/lv_tft_espi.h</itemPath>
             </logicalFolder>
@@ -777,6 +771,7 @@
           <logicalFolder name="evdev" displayName="evdev" projectFiles="true">
             <itemPath>../src/lvgl/src/drivers/evdev/lv_evdev.c</itemPath>
             <itemPath>../src/lvgl/src/drivers/evdev/lv_evdev.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/evdev/lv_evdev_private.h</itemPath>
           </logicalFolder>
           <logicalFolder name="glfw" displayName="glfw" projectFiles="true">
             <itemPath>../src/lvgl/src/drivers/glfw/lv_glfw_window.c</itemPath>
@@ -830,11 +825,45 @@
             <itemPath>../src/lvgl/src/drivers/sdl/lv_sdl_private.h</itemPath>
             <itemPath>../src/lvgl/src/drivers/sdl/lv_sdl_window.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="uefi" displayName="uefi" projectFiles="true">
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_context.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_display.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_indev_keyboard.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_indev_pointer.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_indev_touch.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_private.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_context.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_display.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_edk2.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_gnu_efi.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_indev.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_private.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/uefi/lv_uefi_std_wrapper.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="wayland" displayName="wayland" projectFiles="true">
             <itemPath>../src/lvgl/src/drivers/wayland/lv_wayland.c</itemPath>
             <itemPath>../src/lvgl/src/drivers/wayland/lv_wayland_smm.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_cache.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_dmabuf.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_keyboard.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_pointer.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_pointer_axis.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_seat.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_shell.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_shm.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_touch.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_window.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_window_decorations.c</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_xdg_shell.c</itemPath>
             <itemPath>../src/lvgl/src/drivers/wayland/lv_wayland.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wayland_private.h</itemPath>
             <itemPath>../src/lvgl/src/drivers/wayland/lv_wayland_smm.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_keyboard.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_pointer.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_pointer_axis.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_touch.h</itemPath>
+            <itemPath>../src/lvgl/src/drivers/wayland/lv_wl_window.h</itemPath>
           </logicalFolder>
           <logicalFolder name="windows" displayName="windows" projectFiles="true">
             <itemPath>../src/lvgl/src/drivers/windows/lv_windows_context.c</itemPath>
@@ -860,6 +889,7 @@
           <itemPath>../src/lvgl/src/font/lv_font_montserrat_10.c</itemPath>
           <itemPath>../src/lvgl/src/font/lv_font_montserrat_12.c</itemPath>
           <itemPath>../src/lvgl/src/font/lv_font_montserrat_14.c</itemPath>
+          <itemPath>../src/lvgl/src/font/lv_font_montserrat_14_aligned.c</itemPath>
           <itemPath>../src/lvgl/src/font/lv_font_montserrat_16.c</itemPath>
           <itemPath>../src/lvgl/src/font/lv_font_montserrat_18.c</itemPath>
           <itemPath>../src/lvgl/src/font/lv_font_montserrat_20.c</itemPath>
@@ -881,6 +911,8 @@
           <itemPath>../src/lvgl/src/font/lv_font_montserrat_8.c</itemPath>
           <itemPath>../src/lvgl/src/font/lv_font_simsun_14_cjk.c</itemPath>
           <itemPath>../src/lvgl/src/font/lv_font_simsun_16_cjk.c</itemPath>
+          <itemPath>../src/lvgl/src/font/lv_font_source_han_sans_sc_14_cjk.c</itemPath>
+          <itemPath>../src/lvgl/src/font/lv_font_source_han_sans_sc_16_cjk.c</itemPath>
           <itemPath>../src/lvgl/src/font/lv_font_unscii_16.c</itemPath>
           <itemPath>../src/lvgl/src/font/lv_font_unscii_8.c</itemPath>
           <itemPath>../src/lvgl/src/font/lv_binfont_loader.h</itemPath>
@@ -891,8 +923,11 @@
         </logicalFolder>
         <logicalFolder name="indev" displayName="indev" projectFiles="true">
           <itemPath>../src/lvgl/src/indev/lv_indev.c</itemPath>
+          <itemPath>../src/lvgl/src/indev/lv_indev_gesture.c</itemPath>
           <itemPath>../src/lvgl/src/indev/lv_indev_scroll.c</itemPath>
           <itemPath>../src/lvgl/src/indev/lv_indev.h</itemPath>
+          <itemPath>../src/lvgl/src/indev/lv_indev_gesture.h</itemPath>
+          <itemPath>../src/lvgl/src/indev/lv_indev_gesture_private.h</itemPath>
           <itemPath>../src/lvgl/src/indev/lv_indev_private.h</itemPath>
           <itemPath>../src/lvgl/src/indev/lv_indev_scroll.h</itemPath>
         </logicalFolder>
@@ -925,6 +960,28 @@
             <itemPath>../src/lvgl/src/libs/bmp/lv_bmp.c</itemPath>
             <itemPath>../src/lvgl/src/libs/bmp/lv_bmp.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="expat" displayName="expat" projectFiles="true">
+            <itemPath>../src/lvgl/src/libs/expat/xmlparse.c</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/xmlrole.c</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/xmltok.c</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/xmltok_impl.c</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/xmltok_ns.c</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/ascii.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/asciitab.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/expat.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/expat_config.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/expat_external.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/iasciitab.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/internal.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/latin1tab.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/nametab.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/siphash.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/utf8tab.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/winconfig.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/xmlrole.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/xmltok.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/expat/xmltok_impl.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="ffmpeg" displayName="ffmpeg" projectFiles="true">
             <itemPath>../src/lvgl/src/libs/ffmpeg/lv_ffmpeg.c</itemPath>
             <itemPath>../src/lvgl/src/libs/ffmpeg/lv_ffmpeg.h</itemPath>
@@ -948,6 +1005,7 @@
             <itemPath>../src/lvgl/src/libs/fsdrv/lv_fs_memfs.c</itemPath>
             <itemPath>../src/lvgl/src/libs/fsdrv/lv_fs_posix.c</itemPath>
             <itemPath>../src/lvgl/src/libs/fsdrv/lv_fs_stdio.c</itemPath>
+            <itemPath>../src/lvgl/src/libs/fsdrv/lv_fs_uefi.c</itemPath>
             <itemPath>../src/lvgl/src/libs/fsdrv/lv_fs_win32.c</itemPath>
             <itemPath>../src/lvgl/src/libs/fsdrv/lv_fsdrv.h</itemPath>
           </logicalFolder>
@@ -994,6 +1052,18 @@
             <itemPath>../src/lvgl/src/libs/rlottie/lv_rlottie.c</itemPath>
             <itemPath>../src/lvgl/src/libs/rlottie/lv_rlottie.h</itemPath>
             <itemPath>../src/lvgl/src/libs/rlottie/lv_rlottie_private.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="svg" displayName="svg" projectFiles="true">
+            <itemPath>../src/lvgl/src/libs/svg/lv_svg.c</itemPath>
+            <itemPath>../src/lvgl/src/libs/svg/lv_svg_decoder.c</itemPath>
+            <itemPath>../src/lvgl/src/libs/svg/lv_svg_parser.c</itemPath>
+            <itemPath>../src/lvgl/src/libs/svg/lv_svg_render.c</itemPath>
+            <itemPath>../src/lvgl/src/libs/svg/lv_svg_token.c</itemPath>
+            <itemPath>../src/lvgl/src/libs/svg/lv_svg.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/svg/lv_svg_decoder.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/svg/lv_svg_parser.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/svg/lv_svg_render.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/svg/lv_svg_token.h</itemPath>
           </logicalFolder>
           <logicalFolder name="thorvg" displayName="thorvg" projectFiles="true">
             <logicalFolder name="rapidjson" displayName="rapidjson" projectFiles="true">
@@ -1056,18 +1126,20 @@
             <itemPath>../src/lvgl/src/libs/thorvg/tvgFrameModule.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgInlist.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgIteratorAccessor.h</itemPath>
-            <itemPath>../src/lvgl/src/libs/thorvg/tvgLines.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgLoader.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgLoadModule.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgLock.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgLottieBuilder.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/thorvg/tvgLottieCommon.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgLottieExpressions.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgLottieInterpolator.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgLottieLoader.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgLottieModel.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/thorvg/tvgLottieModifier.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgLottieParser.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgLottieParserHandler.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgLottieProperty.h</itemPath>
+            <itemPath>../src/lvgl/src/libs/thorvg/tvgLottieRenderPooler.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgMath.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgPaint.h</itemPath>
             <itemPath>../src/lvgl/src/libs/thorvg/tvgPicture.h</itemPath>
@@ -1109,18 +1181,26 @@
         </logicalFolder>
         <logicalFolder name="misc" displayName="misc" projectFiles="true">
           <logicalFolder name="cache" displayName="cache" projectFiles="true">
+            <logicalFolder name="class" displayName="class" projectFiles="true">
+              <itemPath>../src/lvgl/src/misc/cache/class/lv_cache_lru_ll.c</itemPath>
+              <itemPath>../src/lvgl/src/misc/cache/class/lv_cache_lru_rb.c</itemPath>
+              <itemPath>../src/lvgl/src/misc/cache/class/lv_cache_class.h</itemPath>
+              <itemPath>../src/lvgl/src/misc/cache/class/lv_cache_lru_ll.h</itemPath>
+              <itemPath>../src/lvgl/src/misc/cache/class/lv_cache_lru_rb.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="instance" displayName="instance" projectFiles="true">
+              <itemPath>../src/lvgl/src/misc/cache/instance/lv_image_cache.c</itemPath>
+              <itemPath>../src/lvgl/src/misc/cache/instance/lv_image_header_cache.c</itemPath>
+              <itemPath>../src/lvgl/src/misc/cache/instance/lv_cache_instance.h</itemPath>
+              <itemPath>../src/lvgl/src/misc/cache/instance/lv_image_cache.h</itemPath>
+              <itemPath>../src/lvgl/src/misc/cache/instance/lv_image_header_cache.h</itemPath>
+            </logicalFolder>
             <itemPath>../src/lvgl/src/misc/cache/lv_cache.c</itemPath>
             <itemPath>../src/lvgl/src/misc/cache/lv_cache_entry.c</itemPath>
-            <itemPath>../src/lvgl/src/misc/cache/lv_cache_lru_rb.c</itemPath>
-            <itemPath>../src/lvgl/src/misc/cache/lv_image_cache.c</itemPath>
-            <itemPath>../src/lvgl/src/misc/cache/lv_image_header_cache.c</itemPath>
             <itemPath>../src/lvgl/src/misc/cache/lv_cache.h</itemPath>
             <itemPath>../src/lvgl/src/misc/cache/lv_cache_entry.h</itemPath>
             <itemPath>../src/lvgl/src/misc/cache/lv_cache_entry_private.h</itemPath>
-            <itemPath>../src/lvgl/src/misc/cache/lv_cache_lru_rb.h</itemPath>
             <itemPath>../src/lvgl/src/misc/cache/lv_cache_private.h</itemPath>
-            <itemPath>../src/lvgl/src/misc/cache/lv_image_cache.h</itemPath>
-            <itemPath>../src/lvgl/src/misc/cache/lv_image_header_cache.h</itemPath>
           </logicalFolder>
           <itemPath>../src/lvgl/src/misc/lv_anim.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_anim_timeline.c</itemPath>
@@ -1128,10 +1208,13 @@
           <itemPath>../src/lvgl/src/misc/lv_array.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_async.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_bidi.c</itemPath>
+          <itemPath>../src/lvgl/src/misc/lv_circle_buf.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_color.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_color_op.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_event.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_fs.c</itemPath>
+          <itemPath>../src/lvgl/src/misc/lv_grad.c</itemPath>
+          <itemPath>../src/lvgl/src/misc/lv_iter.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_ll.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_log.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_lru.c</itemPath>
@@ -1146,6 +1229,7 @@
           <itemPath>../src/lvgl/src/misc/lv_text.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_text_ap.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_timer.c</itemPath>
+          <itemPath>../src/lvgl/src/misc/lv_tree.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_utils.c</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_anim.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_anim_private.h</itemPath>
@@ -1157,6 +1241,7 @@
           <itemPath>../src/lvgl/src/misc/lv_async.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_bidi.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_bidi_private.h</itemPath>
+          <itemPath>../src/lvgl/src/misc/lv_circle_buf.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_color.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_color_op.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_color_op_private.h</itemPath>
@@ -1164,6 +1249,8 @@
           <itemPath>../src/lvgl/src/misc/lv_event_private.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_fs.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_fs_private.h</itemPath>
+          <itemPath>../src/lvgl/src/misc/lv_grad.h</itemPath>
+          <itemPath>../src/lvgl/src/misc/lv_iter.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_ll.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_log.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_lru.h</itemPath>
@@ -1184,26 +1271,31 @@
           <itemPath>../src/lvgl/src/misc/lv_text_private.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_timer.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_timer_private.h</itemPath>
+          <itemPath>../src/lvgl/src/misc/lv_tree.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_types.h</itemPath>
           <itemPath>../src/lvgl/src/misc/lv_utils.h</itemPath>
         </logicalFolder>
         <logicalFolder name="osal" displayName="osal" projectFiles="true">
           <itemPath>../src/lvgl/src/osal/lv_cmsis_rtos2.c</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_freertos.c</itemPath>
+          <itemPath>../src/lvgl/src/osal/lv_linux.c</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_mqx.c</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_os.c</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_os_none.c</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_pthread.c</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_rtthread.c</itemPath>
+          <itemPath>../src/lvgl/src/osal/lv_sdl2.c</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_windows.c</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_cmsis_rtos2.h</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_freertos.h</itemPath>
+          <itemPath>../src/lvgl/src/osal/lv_linux_private.h</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_mqx.h</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_os.h</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_os_none.h</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_os_private.h</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_pthread.h</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_rtthread.h</itemPath>
+          <itemPath>../src/lvgl/src/osal/lv_sdl2.h</itemPath>
           <itemPath>../src/lvgl/src/osal/lv_windows.h</itemPath>
         </logicalFolder>
         <logicalFolder name="others" displayName="others" projectFiles="true">
@@ -1213,6 +1305,14 @@
             <itemPath>../src/lvgl/src/others/file_explorer/lv_file_explorer.c</itemPath>
             <itemPath>../src/lvgl/src/others/file_explorer/lv_file_explorer.h</itemPath>
             <itemPath>../src/lvgl/src/others/file_explorer/lv_file_explorer_private.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="font_manager"
+                         displayName="font_manager"
+                         projectFiles="true">
+            <itemPath>../src/lvgl/src/others/font_manager/lv_font_manager.c</itemPath>
+            <itemPath>../src/lvgl/src/others/font_manager/lv_font_manager_recycle.c</itemPath>
+            <itemPath>../src/lvgl/src/others/font_manager/lv_font_manager.h</itemPath>
+            <itemPath>../src/lvgl/src/others/font_manager/lv_font_manager_recycle.h</itemPath>
           </logicalFolder>
           <logicalFolder name="fragment" displayName="fragment" projectFiles="true">
             <itemPath>../src/lvgl/src/others/fragment/lv_fragment.c</itemPath>
@@ -1256,6 +1356,70 @@
             <itemPath>../src/lvgl/src/others/vg_lite_tvg/vg_lite_matrix.c</itemPath>
             <itemPath>../src/lvgl/src/others/vg_lite_tvg/vg_lite.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="xml" displayName="xml" projectFiles="true">
+            <logicalFolder name="parsers" displayName="parsers" projectFiles="true">
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_arc_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_bar_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_buttonmatrix_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_button_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_calendar_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_canvas_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_chart_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_checkbox_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_dropdown_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_event_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_image_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_keyboard_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_label_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_obj_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_roller_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_scale_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_slider_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_spangroup_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_table_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_tabview_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_textarea_parser.c</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_arc_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_bar_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_buttonmatrix_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_button_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_calendar_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_canvas_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_chart_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_checkbox_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_dropdown_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_event_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_image_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_keyboard_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_label_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_obj_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_roller_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_scale_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_slider_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_spangroup_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_table_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_tabview_parser.h</itemPath>
+              <itemPath>../src/lvgl/src/others/xml/parsers/lv_xml_textarea_parser.h</itemPath>
+            </logicalFolder>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml.c</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_base_types.c</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_component.c</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_parser.c</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_style.c</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_update.c</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_utils.c</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_widget.c</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml.h</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_base_types.h</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_component.h</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_component_private.h</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_parser.h</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_private.h</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_style.h</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_update.h</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_utils.h</itemPath>
+            <itemPath>../src/lvgl/src/others/xml/lv_xml_widget.h</itemPath>
+          </logicalFolder>
         </logicalFolder>
         <logicalFolder name="stdlib" displayName="stdlib" projectFiles="true">
           <logicalFolder name="builtin" displayName="builtin" projectFiles="true">
@@ -1278,6 +1442,9 @@
             <itemPath>../src/lvgl/src/stdlib/rtthread/lv_mem_core_rtthread.c</itemPath>
             <itemPath>../src/lvgl/src/stdlib/rtthread/lv_sprintf_rtthread.c</itemPath>
             <itemPath>../src/lvgl/src/stdlib/rtthread/lv_string_rtthread.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="uefi" displayName="uefi" projectFiles="true">
+            <itemPath>../src/lvgl/src/stdlib/uefi/lv_mem_core_uefi.c</itemPath>
           </logicalFolder>
           <itemPath>../src/lvgl/src/stdlib/lv_mem.c</itemPath>
           <itemPath>../src/lvgl/src/stdlib/lv_mem.h</itemPath>
@@ -1308,6 +1475,11 @@
           <itemPath>../src/lvgl/src/tick/lv_tick_private.h</itemPath>
         </logicalFolder>
         <logicalFolder name="widgets" displayName="widgets" projectFiles="true">
+          <logicalFolder name="3dtexture" displayName="3dtexture" projectFiles="true">
+            <itemPath>../src/lvgl/src/widgets/3dtexture/lv_3dtexture.c</itemPath>
+            <itemPath>../src/lvgl/src/widgets/3dtexture/lv_3dtexture.h</itemPath>
+            <itemPath>../src/lvgl/src/widgets/3dtexture/lv_3dtexture_private.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="animimage" displayName="animimage" projectFiles="true">
             <itemPath>../src/lvgl/src/widgets/animimage/lv_animimage.c</itemPath>
             <itemPath>../src/lvgl/src/widgets/animimage/lv_animimage.h</itemPath>
@@ -1342,7 +1514,6 @@
             <itemPath>../src/lvgl/src/widgets/calendar/lv_calendar_header_dropdown.c</itemPath>
             <itemPath>../src/lvgl/src/widgets/calendar/lv_calendar.h</itemPath>
             <itemPath>../src/lvgl/src/widgets/calendar/lv_calendar_chinese.h</itemPath>
-            <itemPath>../src/lvgl/src/widgets/calendar/lv_calendar_chinese_private.h</itemPath>
             <itemPath>../src/lvgl/src/widgets/calendar/lv_calendar_header_arrow.h</itemPath>
             <itemPath>../src/lvgl/src/widgets/calendar/lv_calendar_header_dropdown.h</itemPath>
             <itemPath>../src/lvgl/src/widgets/calendar/lv_calendar_private.h</itemPath>
@@ -1421,12 +1592,14 @@
             <itemPath>../src/lvgl/src/widgets/objx_templ/lv_objx_templ.h</itemPath>
           </logicalFolder>
           <logicalFolder name="property" displayName="property" projectFiles="true">
+            <itemPath>../src/lvgl/src/widgets/property/lv_animimage_properties.c</itemPath>
             <itemPath>../src/lvgl/src/widgets/property/lv_dropdown_properties.c</itemPath>
             <itemPath>../src/lvgl/src/widgets/property/lv_image_properties.c</itemPath>
             <itemPath>../src/lvgl/src/widgets/property/lv_keyboard_properties.c</itemPath>
             <itemPath>../src/lvgl/src/widgets/property/lv_label_properties.c</itemPath>
             <itemPath>../src/lvgl/src/widgets/property/lv_obj_properties.c</itemPath>
             <itemPath>../src/lvgl/src/widgets/property/lv_roller_properties.c</itemPath>
+            <itemPath>../src/lvgl/src/widgets/property/lv_slider_properties.c</itemPath>
             <itemPath>../src/lvgl/src/widgets/property/lv_style_properties.c</itemPath>
             <itemPath>../src/lvgl/src/widgets/property/lv_textarea_properties.c</itemPath>
             <itemPath>../src/lvgl/src/widgets/property/lv_obj_property_names.h</itemPath>
@@ -1502,6 +1675,10 @@
         <itemPath>../src/lvgl/src/lv_conf_kconfig.h</itemPath>
         <itemPath>../src/lvgl/src/lv_init.h</itemPath>
       </logicalFolder>
+      <itemPath>../src/lvgl/lvgl.h</itemPath>
+      <itemPath>../src/lvgl/lvgl_private.h</itemPath>
+      <itemPath>../src/lvgl/lv_conf_template.h</itemPath>
+      <itemPath>../src/lvgl/lv_version.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -1521,10 +1698,6 @@
               <itemPath>../src/config/default/gfx/display/touch_display.c</itemPath>
             </logicalFolder>
             <logicalFolder name="driver" displayName="driver" projectFiles="true">
-              <logicalFolder name="gpu2dc" displayName="gpu2dc" projectFiles="true">
-                <itemPath>../src/config/default/gfx/driver/gpu2dc/nano2D_hal.c</itemPath>
-                <itemPath>../src/config/default/gfx/driver/gpu2dc/drv_gfx_gpu2dc.c</itemPath>
-              </logicalFolder>
               <logicalFolder name="xlcdc" displayName="xlcdc" projectFiles="true">
                 <logicalFolder name="bridge" displayName="bridge" projectFiles="true">
                   <itemPath>../src/config/default/gfx/driver/controller/xlcdc/bridge/dsi/plib_dsi.c</itemPath>
@@ -1627,7 +1800,6 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>../src/config/default/gfx/driver/gpu2dc/libgpu2dc.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
@@ -1653,7 +1825,6 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value="-marm"/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -1673,7 +1844,7 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="keep-inline" value="false"/>
-        <property key="make-warnings-into-errors" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
         <property key="oXC16gcc-errata" value=""/>
         <property key="oXC16gcc-large-aggregate" value="false"/>
         <property key="oXC16gcc-mpa-lvl" value=""/>
@@ -1734,7 +1905,6 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1780,7 +1950,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -1833,7 +2002,7 @@
         <property key="communication.adaptivespeed" value="false"/>
         <property key="communication.autoselectspeed" value="false"/>
         <property key="communication.interface" value="swd"/>
-        <property key="communication.speed" value="12"/>
+        <property key="communication.speed" value="10"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="event.recorder.debugger.behavior" value="Running"/>
@@ -1868,7 +2037,7 @@
         <property key="communication.adaptivespeed" value="false"/>
         <property key="communication.autoselectspeed" value="false"/>
         <property key="communication.interface" value="swd"/>
-        <property key="communication.speed" value="12"/>
+        <property key="communication.speed" value="10"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="event.recorder.debugger.behavior" value="Running"/>

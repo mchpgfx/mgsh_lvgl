@@ -39,6 +39,8 @@ int main ( void )
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 
+    printf("SAMA7D65 LVGL Demo\r\n");
+    
     while ( true )
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */
@@ -53,4 +55,3 @@ int main ( void )
 /*******************************************************************************
  End of File
 */
-

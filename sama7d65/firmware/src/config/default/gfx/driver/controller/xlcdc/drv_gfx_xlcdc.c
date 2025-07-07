@@ -42,7 +42,6 @@
 #include "arm_neon.h"
 #include "toolchain_specifics.h"
 #include "gfx/driver/gfx_driver.h"
-#include "gfx/driver/gpu2dc/drv_gfx_gpu2dc.h"
 #include "gfx/driver/controller/xlcdc/drv_gfx_xlcdc.h"
 #include "gfx/driver/controller/xlcdc/plib/plib_xlcdc.h"
 
@@ -348,15 +347,10 @@ gfxResult DRV_XLCDC_BlitBuffer(int32_t x, int32_t y, gfxPixelBuffer* buf)
     destRect.height = buf->size.height;
     destRect.width = buf->size.width;
 
-    result = gfxGPUInterface.blitBuffer(buf, &srcRect, &drvLayer[activeLayer].pixelBuffer[drvLayer[activeLayer].frontBufferIdx], &destRect);
-    
-    if (result == GFX_FAILURE)
-    {
-        result = DRV_XLCDC_CPU_Blit(buf,
-                                    &srcRect,
-                                    &drvLayer[activeLayer].pixelBuffer[drvLayer[activeLayer].frontBufferIdx],
-                                    &destRect);
-    }
+    result = DRV_XLCDC_CPU_Blit(buf,
+                                &srcRect,
+                                &drvLayer[activeLayer].pixelBuffer[drvLayer[activeLayer].frontBufferIdx],
+                                &destRect);
 
     gfxPixelBuffer_SetLocked(buf, GFX_FALSE);
 

@@ -71,6 +71,119 @@ typedef struct
     __IO   uint32_t CNTFID0;
 }pselctrl_registers_t;
 
+static pmc_pll_cfg_t cpupll_cfg = {
+    .mul = 40U,
+    .divpll = 0U,
+    .eniopllck = false,
+    .divio = 0U,
+    .count = PLL_UPDT_STUPTIM_VAL,
+    .fracr = 2796203U,
+    .acr = PLL_ACR_RECOMMENDED,
+    .ss = false,
+    .step = 0U,
+    .nstep = 0U
+};
+
+static pmc_pll_cfg_t syspll_cfg = {
+    .mul = 49U,
+    .divpll = 2U,
+    .eniopllck = false,
+    .divio = 0U,
+    .count = PLL_UPDT_STUPTIM_VAL,
+    .fracr = 0U,
+    .acr = PLL_ACR_RECOMMENDED,
+    .ss = false,
+    .step = 0U,
+    .nstep = 0U
+};
+
+static pmc_pll_cfg_t ddrpll_cfg = {
+    .mul = 43U,
+    .divpll = 1U,
+    .eniopllck = false,
+    .divio = 0U,
+    .count = PLL_UPDT_STUPTIM_VAL,
+    .fracr = 1747627U,
+    .acr = PLL_ACR_RECOMMENDED,
+    .ss = false,
+    .step = 0U,
+    .nstep = 0U
+};
+
+static pmc_pll_cfg_t gpupll_cfg = {
+    .mul = 43U,
+    .divpll = 1U,
+    .eniopllck = false,
+    .divio = 0U,
+    .count = PLL_UPDT_STUPTIM_VAL,
+    .fracr = 1747627U,
+    .acr = PLL_ACR_RECOMMENDED,
+    .ss = false,
+    .step = 0U,
+    .nstep = 0U
+};
+
+static pmc_pll_cfg_t baudpll_cfg = {
+    .mul = 32U,
+    .divpll = 2U,
+    .eniopllck = false,
+    .divio = 0U,
+    .count = PLL_UPDT_STUPTIM_VAL,
+    .fracr = 1398096U,
+    .acr = PLL_ACR_RECOMMENDED,
+    .ss = false,
+    .step = 0U,
+    .nstep = 0U
+};
+
+
+/*********************************************************************************
+Initialize PLL
+*********************************************************************************/
+static void initPLL(uint32_t pll_id, pmc_pll_cfg_t *pll_cfg)
+{
+    /* STEP 1: Define the ID and startup time by configuring the fields PMC_PLL_UPDT.ID and PMC_PLL_UPDT.STUPTIM.
+       Set PMC_PLL_UPDT.UPDATE to 0 */
+    uint32_t reg = PMC_REGS->PMC_PLL_UPDT & ~(PMC_PLL_UPDT_UPDATE_Msk);
+    reg |= (PMC_PLL_UPDT_ID(pll_id)  | PMC_PLL_UPDT_STUPTIM(pll_cfg->count));
+    PMC_REGS->PMC_PLL_UPDT = reg;
+
+    /* STEP 2: Configure PMC_PLL_ACR.LOOP_FILTER */
+    PMC_REGS->PMC_PLL_ACR = pll_cfg->acr;
+
+    /* STEP 3: Define the MUL and FRACR to be applied to PLL(n) in PMC_PLL_CTRL1 */
+    PMC_REGS->PMC_PLL_CTRL1 = PMC_PLL_CTRL1_MUL(pll_cfg->mul) | PMC_PLL_CTRL1_FRACR(pll_cfg->fracr);
+
+    /* STEP 4: Set PMC_PLL_UPDT.UPDATE to 1 */
+    PMC_REGS->PMC_PLL_UPDT |= PMC_PLL_UPDT_UPDATE_Msk;
+
+    /* STEP 5: In PMC_PLL_CTRL0, write 1 to ENLOCK and to ENPLL and configure DIVPMC, DIVIO, ENPLLCK and ENIOPLLCK */
+    reg = PMC_REGS->PMC_PLL_CTRL0 & ~(PMC_PLL_CTRL0_Msk);
+    reg |= (PMC_PLL_CTRL0_ENPLL_Msk | PMC_PLL_CTRL0_ENPLLCK_Msk | PMC_PLL_CTRL0_ENLOCK_Msk | PMC_PLL_CTRL0_DIVPMC(pll_cfg->divpll));
+    if (pll_cfg->eniopllck)
+    {
+        reg |= (PMC_PLL_CTRL0_ENIOPLLCK_Msk | PMC_PLL_CTRL0_DIVIO(pll_cfg->divio));
+    }
+    PMC_REGS->PMC_PLL_CTRL0 = reg;
+
+    /* STEP 6: Set PMC_PLL_UPDT.UPDATE to 1 */
+    PMC_REGS->PMC_PLL_UPDT |= PMC_PLL_UPDT_UPDATE_Msk;
+
+    /* STEP 7: Wait for the lock bit to rise by polling the PMC_PLL_ISR0 */
+    uint32_t pll_lock_mask = 1UL << pll_id;
+    while ((PMC_REGS->PMC_PLL_ISR0 & pll_lock_mask) != pll_lock_mask)
+    {
+        /* Wait for PLL lock to rise */
+    }
+    /* Setup spread spectrum, if is enabled */
+    if (pll_cfg->ss)
+    {
+        reg = PMC_REGS->PMC_PLL_SSR & ~(PMC_PLL_SSR_Msk);
+        reg |= (PMC_PLL_SSR_ENSPREAD_Msk | PMC_PLL_SSR_STEP(pll_cfg->step) | PMC_PLL_SSR_NSTEP(pll_cfg->nstep));
+        PMC_REGS->PMC_PLL_SSR = reg;
+    }
+}
+
 
 /*********************************************************************************
 Initialize Programmable clocks
@@ -154,6 +267,21 @@ void CLK_Initialize( void )
     /* Set main crystal frequency for UTMI PLL */
     PMC_REGS->PMC_XTALF = PMC_XTALF_XTALF_F24M;
     SFRBU_REGS->SFRBU_PSWBU = SFRBU_PSWBU_CTRL_SOFT | SFRBU_PSWBU_PSWKEY_PASSWD;
+
+    /* Initialize CPUPLL */
+    initPLL(PLL_ID_CPUPLL, &cpupll_cfg);
+
+    /* Initialize SYSPLL */
+    initPLL(PLL_ID_SYSPLL, &syspll_cfg);
+
+    /* Initialize DDRPLL */
+    initPLL(PLL_ID_DDRPLL, &ddrpll_cfg);
+
+    /* Initialize GPUPLL */
+    initPLL(PLL_ID_GPUPLL, &gpupll_cfg);
+
+    /* Initialize BAUDPLL */
+    initPLL(PLL_ID_BAUDPLL, &baudpll_cfg);
 
     /* Initialize Programmable clock */
     initProgrammableClocks();

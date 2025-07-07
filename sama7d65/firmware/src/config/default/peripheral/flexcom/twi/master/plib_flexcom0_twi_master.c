@@ -167,7 +167,7 @@ static void FLEXCOM0_TWI_InitiateRead(void)
 
 static bool FLEXCOM0_TWI_InitiateTransfer(uint16_t address, bool type)
 {
-    uint32_t timeoutCntr = 160000;
+    uint32_t timeoutCntr = 200000;
 
     // 10-bit Slave Address
     if( address > 0x007FU )

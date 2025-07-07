@@ -58,7 +58,6 @@
 // *****************************************************************************
 void RTT_InterruptHandler (void);
 void FLEXCOM0_InterruptHandler (void);
-void GPU2DC_InterruptHandler (void);
 
 
 

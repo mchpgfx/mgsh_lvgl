@@ -60,7 +60,6 @@
 #include "system/time/sys_time.h"
 #include "driver/i2c/drv_i2c.h"
 #include "system/input/sys_input.h"
-#include "gfx/driver/gpu2dc/drv_gfx_gpu2dc.h"
 #include "gfx/driver/controller/xlcdc/plib/plib_xlcdc.h"
 #include "gfx/driver/controller/xlcdc/drv_gfx_xlcdc.h"
 #include "peripheral/rtt/plib_rtt.h"
@@ -89,7 +88,7 @@ extern "C" {
 #define DEVICE_SERIES        "SAMA7D6"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 800000000U
+#define CPU_CLOCK_FREQUENCY 1000000000U
 
 // *****************************************************************************
 // *****************************************************************************
