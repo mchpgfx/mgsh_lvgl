@@ -36,7 +36,7 @@
 #include "lv_demos.h"
 
 /* LVGL Parameters */
-#define LV_UNCACHED_BUFFER  0
+#define LV_UNCACHED_BUFFER  1
 #define LV_TICK_INC_VAL_MS  1
 #define LV_TASK_INC_VAL_MS  LV_DEF_REFR_PERIOD
 

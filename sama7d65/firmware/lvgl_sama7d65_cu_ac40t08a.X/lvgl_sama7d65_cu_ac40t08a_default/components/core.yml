@@ -3370,6 +3370,16 @@ data:
           type: User
         type: Values
       type: Boolean
+    GPU2DC_INTERRUPT_ENABLE:
+      attributes:
+        id: GPU2DC_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
   userData:
     children:
     - attributes:

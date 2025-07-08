@@ -250,6 +250,9 @@
     #endif
 #endif
 
+/* Use Microchip GPU2DC */
+#define LV_USE_DRAW_GPU2DC 1
+
 /** Use NXP's VG-Lite GPU on iMX RTxxx platforms. */
 #define LV_USE_DRAW_VGLITE 0
 

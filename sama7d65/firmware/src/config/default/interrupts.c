@@ -51,6 +51,7 @@
 #include "configuration.h"
 #include "interrupts.h"
 #include "definitions.h"
+#include "nano2D.h"
 
 
 
@@ -60,7 +61,10 @@
 // *****************************************************************************
 // *****************************************************************************
 
-
+void GPU2DC_Handler (void)
+{
+    n2d_handle_events();
+}
 
 
 
