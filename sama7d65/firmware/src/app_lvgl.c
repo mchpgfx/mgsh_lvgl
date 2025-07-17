@@ -34,6 +34,9 @@
 #include "lvgl.h"
 #include "lv_conf.h"
 #include "lv_demos.h"
+#include "nano2D_enum.h"
+#include "nano2D.h"
+#include "arm_neon.h"
 
 /* LVGL Parameters */
 #define LV_UNCACHED_BUFFER  1
@@ -101,18 +104,109 @@ static void lv_tick_inc_cb(uintptr_t _)
     lv_tick_inc(LV_TICK_INC_VAL_MS);
 }
 
+/* GPU2DC Stride Alignment Check */
+#define GFX_STRIDE_ALIGN_FAILS(w, m, p) ( \
+    ((uintptr_t)(p) & 0xF) != 0 || ( \
+    ((m)==N2D_RGB565 || (m)==N2D_ARGB8888) ? ((w) & 0xF) != 0 : /* 16-byte aligned */  \
+    ((m)==N2D_RGB888) ? ((w) % 6) != 0 :                        /* 6-byte aligned */   \
+    1)) /* default to fail safe */
+
+/* Alignment Check */
+#define IS_ALIGNED(ptr, align) (((uintptr_t)(ptr) & ((align) - 1)) == 0)
+
 static void lv_disp_drv_flush_cb(lv_display_t * disp_drv, const lv_area_t * area, uint8_t * color_p) 
 {
-    gfxPixelBuffer dstBuf;
-   
-    memset(&dstBuf, 0, sizeof(gfxPixelBuffer));
+    gfxIOCTLArg_Value ioctlArg;
+    ioctlArg.value.v_pbuffer = 0;
+    DRV_XLCDC_IOCTL(GFX_IOCTL_GET_FRAMEBUFFER, &ioctlArg);
     
-    gfxPixelBufferCreate((area->x2 + 1) - area->x1,
-                         (area->y2 + 1) - area->y1,
-                         GFX_COLOR_MODE_RGB_565, color_p, &dstBuf);
+    n2d_buffer_t dst_buf = {0};
+    dst_buf.width = 720;
+    dst_buf.height = 1280;
+    dst_buf.stride = dst_buf.width * 2;
+    dst_buf.format = N2D_RGB565;
+    dst_buf.tiling = N2D_LINEAR;
+    dst_buf.memory = ioctlArg.value.v_pbuffer->pixels;
+    dst_buf.gpu = (n2d_uintptr_t)ioctlArg.value.v_pbuffer->pixels;
     
-    DRV_XLCDC_BlitBuffer(area->x1, area->y1, &dstBuf);
+    n2d_buffer_t src_buf = {0};
+    src_buf.width = lv_area_get_width(area);
+    src_buf.height = lv_area_get_height(area);
+    src_buf.stride = src_buf.width * 2;
+    src_buf.format = N2D_RGB565;
+    src_buf.tiling = N2D_LINEAR;
+    src_buf.memory = (void*)color_p;
+    src_buf.gpu = (n2d_uintptr_t)(void*)color_p;
     
+    n2d_rectangle_t dest_rect;
+    dest_rect.x = area->x1;
+    dest_rect.y = area->y1;
+    dest_rect.width = lv_area_get_width(area);
+    dest_rect.height = lv_area_get_height(area);
+
+    n2d_rectangle_t src_rect;
+    src_rect.x = 0;
+    src_rect.y = 0;
+    src_rect.width = lv_area_get_width(area);
+    src_rect.height = lv_area_get_height(area);
+    
+    if (GFX_STRIDE_ALIGN_FAILS(src_buf.width, src_buf.format, src_buf.memory) ||
+        GFX_STRIDE_ALIGN_FAILS(dst_buf.width, dst_buf.format, dst_buf.memory))
+    {
+        const uint32_t pixelSize = 2;
+        const uint32_t rowSize = src_rect.width * pixelSize;
+        const uint32_t srcStride = src_rect.width * pixelSize;
+        const uint32_t destStride = 720 * pixelSize;
+        
+        uint8_t* restrict srcBase = (uint8_t*)color_p;
+        uint8_t* restrict destBase = (uint8_t*)ioctlArg.value.v_pbuffer->pixels +
+                                     (area->y1 * destStride) +
+                                     (area->x1 * pixelSize);
+
+        for (uint32_t row = 0; row < src_rect.height ; row++)
+        {
+            uint8_t* restrict src = srcBase + row * srcStride;
+            uint8_t* restrict dst = destBase + row * destStride;
+
+            if (IS_ALIGNED(src, 4) && IS_ALIGNED(dst, 4) && rowSize >= 16)
+            {
+                uint32_t vectors = rowSize / 16;
+                uint32_t remain = rowSize % 16;
+
+                if (row < src_rect.height - 1)
+                {
+                    __builtin_prefetch(src + srcStride);
+                }
+
+                while (vectors--)
+                {
+                    __builtin_prefetch(src + 64);
+
+                    uint8x16_t data = vld1q_u8(src);
+                    vst1q_u8(dst, data);
+
+                    src += 16;
+                    dst += 16;
+                }
+
+                if (remain)
+                {
+                    memcpy(dst, src, remain);
+                }
+            }
+            else
+            {
+                memcpy(dst, src, rowSize);
+            }
+        }
+        
+        lv_disp_flush_ready(disp_drv);
+        return;
+    }
+    
+    n2d_blit(&dst_buf, &dest_rect, &src_buf, &src_rect, N2D_BLEND_NONE);
+    n2d_commit();
+
     lv_disp_flush_ready(disp_drv);
 }
 

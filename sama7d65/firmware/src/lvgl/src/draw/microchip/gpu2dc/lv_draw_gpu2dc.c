@@ -80,6 +80,7 @@ static int32_t gpu2dc_evaluate_cb(lv_draw_unit_t * draw_unit, lv_draw_task_t * t
         {
             const lv_draw_image_dsc_t * dsc = task->draw_dsc;
             if (lv_color_format_to_n2d_format(dsc->header.cf) == (n2d_buffer_format_t)-1) return 0;
+            if(!dsc->bitmap_mask_src || dsc->rotation || dsc->clip_radius || dsc->scale_x || dsc->scale_y || dsc->skew_x || dsc->skew_y) return 0;
             if (GFX_STRIDE_ALIGN_FAILS(dsc->header.w, lv_color_format_to_n2d_format(dsc->header.cf), dsc->src)) return 0;
             
             /* If task is supported, assign a preference score. */
@@ -138,7 +139,7 @@ static int32_t gpu2dc_dispatch_cb(lv_draw_unit_t * draw_unit, lv_layer_t * layer
 
             n2d_color_t n2d_color = lv_color_to_n2d_color(dsc->color, dsc->opa);
             n2d_blend_t n2d_blend = N2D_BLEND_SRC_OVER;
-
+          
             n2d_fill(&dst_buf, &dest_rect, n2d_color, n2d_blend);
 
             break;
