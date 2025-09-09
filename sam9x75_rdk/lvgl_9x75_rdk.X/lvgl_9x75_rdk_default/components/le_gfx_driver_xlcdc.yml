@@ -1,0 +1,279 @@
+configVersion: 1.0.0
+componentName: le_gfx_driver_xlcdc
+coreVersion: 5.8.2
+device: SAM9X75D2G
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: le_gfx_driver_xlcdc
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: gfx
+  type: package
+  version: v3.16.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: Graphics Display
+        children:
+        - children:
+          - attributes:
+              id: enabled
+            children:
+            - type: Value
+              value: 'false'
+            type: Boolean
+          type: Attributes
+        type: DirectDependency
+      - attributes:
+          id: gfx_dpi_bridge_dep
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: gfx_bridge_dsi_plib
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: gfx_dpi_bridge_cap
+            type: String
+          type: Attributes
+        type: DirectDependency
+      type: Attachments
+    type: le_gfx_driver_xlcdc
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: le_gfx_driver_xlcdc
+          x: '611'
+          y: '281'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    TotalNumLayers:
+      attributes:
+        id: TotalNumLayers
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XClockGCLKOutHint:
+      attributes:
+        id: XClockGCLKOutHint
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: '50000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XClockGCLKSource:
+      attributes:
+        id: XClockGCLKSource
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    XClockGCLKSrcHint:
+      attributes:
+        id: XClockGCLKSrcHint
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: '400000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XDMColorFB:
+      attributes:
+        id: XDMColorFB
+      children:
+      - children:
+        - attributes:
+            value: '65535'
+          type: User
+        type: Values
+      type: Hex
+    XLMColMode:
+      attributes:
+        id: XLMColMode
+      children:
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: KeyValueSet
+    XLMEnableHEO:
+      attributes:
+        id: XLMEnableHEO
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    XLMEnableOVR1:
+      attributes:
+        id: XLMEnableOVR1
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    XLMEnableOVR2:
+      attributes:
+        id: XLMEnableOVR2
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    XTHorBP:
+      attributes:
+        id: XTHorBP
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: '32'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XTHorFP:
+      attributes:
+        id: XTHorFP
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: '330'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XTHorPW:
+      attributes:
+        id: XTHorPW
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: '32'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XTPolDISP:
+      attributes:
+        id: XTPolDISP
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XTPolHSyncNegative:
+      attributes:
+        id: XTPolHSyncNegative
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XTPolVSyncNegative:
+      attributes:
+        id: XTPolVSyncNegative
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XTResPPL:
+      attributes:
+        id: XTResPPL
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: '720'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XTResRPF:
+      attributes:
+        id: XTResRPF
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: '720'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XTVerBP:
+      attributes:
+        id: XTVerBP
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: '16'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XTVerFP:
+      attributes:
+        id: XTVerFP
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: '8'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XTVerPW:
+      attributes:
+        id: XTVerPW
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_xlcdc
+            value: '4'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}
